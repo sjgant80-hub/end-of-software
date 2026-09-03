@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The End of Software</title>
+<meta name="description" content="Software was frozen intent, rented back as a cage. This page runs the alternative: a seam that collapses capability from a 421-fold shadow ON INTENT — reuse first, five human doors, argued persistence, remembered renders — then folds it back.">
+<style>
+:root{
+  --bg:#08070b; --ink:#eae6f2; --muted:#8d86a3; --accent:#c4b5fd; --accent-2:#ddd6fe;
+  --lit:#fbbf24; --card:#100e16; --line:#241f33; --mono-bg:#13101c; --bad:#f87171; --good:#4ade80;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 Georgia,"Iowan Old Style",serif;background-image:radial-gradient(ellipse 75% 40% at 50% -8%, rgba(196,181,253,.07), transparent)}
+.banner{border-bottom:1px solid var(--line);font:600 11.5px/1.4 system-ui;letter-spacing:.18em;text-transform:uppercase;padding:9px 18px;text-align:center;color:var(--accent)}
+main{max-width:72ch;margin:0 auto;padding:40px 20px 64px}
+h1{font:700 3rem/1.05 Georgia,serif;margin:.2em 0 .15em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+h2{font:700 1.15rem/1.3 system-ui;margin:2.4em 0 .5em;color:var(--accent)}
+.kicker{font:600 12px/1.5 system-ui;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.lede{font-size:1.12rem;color:var(--muted)}
+a{color:var(--accent-2)}
+code{font:13px/1.6 ui-monospace,Consolas,monospace;background:var(--mono-bg);border-radius:4px;padding:1px 5px}
+.law{background:var(--mono-bg);border-left:3px solid var(--accent);border-radius:6px;padding:12px 16px;font:13px/1.75 ui-monospace,Consolas,monospace;overflow-x:auto;white-space:pre-wrap}
+.demo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:1.4em 0;font-family:system-ui}
+.demo h3{margin:0 0 4px;font:600 1rem system-ui;color:var(--accent)}
+.demo p{font-size:13.5px;color:var(--muted);margin:.3em 0 .9em}
+input[type=text]{width:100%;font:15px/1.5 system-ui;background:var(--mono-bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+button{font:600 13.5px system-ui;background:var(--accent);color:var(--bg);border:0;border-radius:9px;padding:9px 16px;cursor:pointer;margin:6px 6px 0 0}
+button:hover{background:var(--accent-2)}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button.warm{background:var(--lit);color:var(--bg)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+.verdict{border-radius:12px;padding:14px 16px;margin-top:12px;font:14px/1.6 system-ui;border:1px solid var(--line)}
+.verdict.door{border-left:4px solid var(--bad)}
+.verdict.reuse{border-left:4px solid var(--good)}
+.verdict.recombine{border-left:4px solid var(--accent)}
+.verdict.generate{border-left:4px solid var(--lit)}
+.verdict .mode{font:700 11px/1 system-ui;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.fold{display:inline-block;background:var(--mono-bg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin:6px 6px 0 0;font:13px system-ui}
+.fold a{font-weight:600}
+#rendered{border:1px dashed var(--lit);border-radius:12px;padding:16px;margin-top:12px}
+#rendered[hidden]{display:none}
+.out{font:12.5px/1.65 ui-monospace,Consolas,monospace;background:var(--mono-bg);border-radius:8px;padding:10px 12px;margin-top:10px;overflow-x:auto;min-height:1.3em;white-space:pre-wrap}
+.check{display:flex;gap:8px;margin:6px 0;font:14px system-ui;align-items:center}
+.honest{border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin:1em 0;background:var(--card);font-size:14.5px}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:16px;font:12px/1.7 system-ui;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="banner">the seam law · witness-clean · 421 live folds in the shadow · reuse first, five human doors, argued persistence</div>
+<main>
+<p class="kicker">the estate's trajectory, named and running</p>
+<h1>The End of <em>Software</em></h1>
+<p class="lede">Software was always a workaround: intent, frozen by someone else years ago, rented
+back to you as a cage. The alternative is running on this page: a <strong>seam</strong> that holds
+a possibility-space — 421 live, working folds of one estate — and collapses <em>capability</em>
+out of it <strong>on intent</strong>. You say what you need. The seam reuses what exists,
+recombines what almost exists, generates only as a last resort — and what it generates
+<strong>folds back</strong> when you're done, leaving only learning behind. You don't have
+software. You're the node that renders it.</p>
+
+<h2>The seam, live — say what you need</h2>
+<div class="demo">
+<h3>Intent in → capability out</h3>
+<p>Type an intent and collapse it against the real estate. Try: <em>"a letter before action with
+verified case law"</em> (reuse) · <em>"double booking guard that learns strategy outcomes"</em>
+(recombine) · <em>"a checklist for opening the cabin each season"</em> (generate + fold back) ·
+<em>"invoice my client"</em> (a door).</p>
+<input type="text" id="intent" placeholder="what do you need done?" aria-label="your intent">
+<div><button id="collapseBtn">collapse</button></div>
+<div id="verdictBox"></div>
+<div id="rendered" hidden></div>
+</div>
+
+<h2>The mechanism</h2>
+<div class="law">SHADOW    the estate's 421 live folds + the ledger of past renders — the possibility-space
+COLLAPSE  on intent, in κ arithmetic and decision order:
+          DOOR      money · legal · irreversible · external · private — five classes a seam
+                    must never auto-render; the human key turns first
+          REUSE     one fold already covers the intent at κ = 0.618 → zero new software
+          RECOMBINE two folds ≥ κ/2 each, together ≥ κ → a composition, not a new cage
+          GENERATE  the last resort, by law — the brief names the gap and the folds to imitate
+PERSIST   fold-back is the DEFAULT; freezing a render needs an argument a reviewer
+          could dispute — "persistence is a choice, and a shrug does not freeze a fold"
+FOLD-BACK the render dissolves; a learning record remains, keyed by the intent
+RECALL    the same intent asked again is answered from memory — the shadow remembers</div>
+
+<h2>Three persistences, one mechanism</h2>
+<p style="font-size:15px">The three "stages of AI software" are not a roadmap — they are the same
+seam at three persistence levels, all running here: <strong>keep-frozen</strong> (the 421 folds —
+capability that earned its persistence), <strong>hold-live</strong> (compositions that exist while
+used), <strong>render-and-fold</strong> (capability as a verb: it happens, then it un-happens).
+Software stops being a noun you own and rent, and becomes a verb your node performs.</p>
+
+<h2>The ledger — what the shadow remembers</h2>
+<div class="demo">
+<h3>Learning retained</h3>
+<p>Every fold-back leaves a record (kept in this browser). Re-ask a known intent and the seam
+answers from memory before it resolves anything.</p>
+<div class="out" id="ledgerOut">nothing rendered yet — the shadow is waiting</div>
+</div>
+
+<h2>The honest wire</h2>
+<div class="honest">
+<p><strong>Running here:</strong> the seam law, mutation-gated with the arguments for every
+surviving equivalent in the baseline; the shadow generated from the estate's real index (421
+live folds, never hand-typed); the demo's generated micro-tools are deterministic renders of the
+brief — real enough to use and fold back. <strong>Not claimed:</strong> that this page writes
+arbitrary software — for that, the brief hands off to YOUR generator (a local model, the estate's
+resident mind, any sovereign seam). The LAW is the product: reuse-first, five doors, argued
+persistence, remembered renders. <strong>The mechanism described on this page is placed in the
+public domain (CC0)</strong> — if prior art exists we welcome it; either way, nobody gets to
+fence this and rent it back. That would be the old world.</p>
+</div>
+
+<footer>
+<p>Seed: Simon (intent + sovereign DNA). Brainstormed with sididy, the estate's resident mind —
+the fifth door (private: a leak cannot be folded back) is its. Built from the estate's own parts:
+the index as the shadow, the grounding law's κ arithmetic, the appetite's memory keys. Built on
+the Konomi architecture, created by Thomas Frumkin. Code MIT · mechanism CC0.</p>
+</footer>
+</main>
+<script>
+/*__KERNEL_START__*/
+/*__KERNEL_END__*/
+/*__SHADOW_START__*/
+/*__SHADOW_END__*/
+(function(){
+  const R=window.RENDER, FOLDS=window.SHADOW.folds;
+  const $=(id)=>document.getElementById(id);
+  const esc=(s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  let LEDGER=[];try{LEDGER=JSON.parse(localStorage.getItem('eos.ledger.v1')||'[]')}catch{}
+  const saveLedger=()=>{try{localStorage.setItem('eos.ledger.v1',JSON.stringify(LEDGER))}catch{}};
+  const drawLedger=()=>{
+    $('ledgerOut').textContent=LEDGER.length===0?'nothing rendered yet — the shadow is waiting':
+      LEDGER.map(r=>'  · ['+r.mode+'] "'+r.key+'" — rendered '+r.renders+'×'+(r.folds.length?' via '+r.folds.join(' + '):'')).join('\n');
+  };
+  drawLedger();
+
+  const foldCard=(f)=>'<span class="fold"><a href="'+esc(f.url)+'" target="_blank" rel="noopener">'+esc(f.name)+'</a> — '+esc(f.desc.slice(0,90))+'…</span>';
+
+  function microTool(text, it){
+    // an honest deterministic render for checklist-ish intents: the words of the intent become
+    // the checklist. Real enough to use; folds back like everything else.
+    const items=it.tokens.slice(0,8);
+    return '<div style="font:14px system-ui"><b>rendered: a checklist from your intent</b>'+
+      items.map((w,i)=>'<label class="check"><input type="checkbox" id="mt'+i+'" style="width:auto"> '+esc(w)+'</label>').join('')+
+      '</div>';
+  }
+
+  function show(text){
+    const box=$('verdictBox'), rend=$('rendered');
+    rend.hidden=true;rend.innerHTML='';
+    const rec=R.recallOf(text,LEDGER);
+    let recallLine='';
+    if(rec.ok&&rec.remembered)recallLine='<div class="out">🧠 '+esc(rec.why)+'</div>';
+    const r=R.collapse(text,FOLDS);
+    if(!r.ok){box.innerHTML='<div class="verdict door"><span class="mode">refused</span><br>'+esc(r.why)+'</div>';return}
+    if(r.mode==='door'){
+      box.innerHTML=recallLine+'<div class="verdict door"><span class="mode">THE DOOR'+(r.doors.length>1?'S':'')+': '+r.doors.join(' + ')+'</span><br>'+esc(r.why)+'</div>';
+      return;
+    }
+    if(r.mode==='reuse'){
+      box.innerHTML=recallLine+'<div class="verdict reuse"><span class="mode">REUSE · support '+r.support+'</span><br>'+esc(r.why)+'<br>'+foldCard(r.fold)+
+        '<br><button class="ghost" id="fbBtn">record the render → ledger</button></div>';
+      $('fbBtn').addEventListener('click',()=>{const f=R.foldBack(LEDGER,text,{mode:'reuse',folds:[r.fold.name]});if(f.ok){LEDGER=f.ledger;saveLedger();drawLedger();}});
+      return;
+    }
+    if(r.mode==='recombine'){
+      box.innerHTML=recallLine+'<div class="verdict recombine"><span class="mode">RECOMBINE · coverage '+r.coverage+'</span><br>'+esc(r.why)+'<br>'+r.folds.map(foldCard).join('')+
+        '<br><button class="ghost" id="fbBtn">record the composition → ledger</button></div>';
+      $('fbBtn').addEventListener('click',()=>{const f=R.foldBack(LEDGER,text,{mode:'recombine',folds:r.folds.map(x=>x.name)});if(f.ok){LEDGER=f.ledger;saveLedger();drawLedger();}});
+      return;
+    }
+    // generate
+    const it=R.intentOf(text);
+    box.innerHTML=recallLine+'<div class="verdict generate"><span class="mode">GENERATE — the last resort</span><br>'+esc(r.brief)+
+      '<br><button class="warm" id="renderBtn">render a micro-tool now</button><button class="ghost" id="briefBtn">copy the brief for your generator</button></div>';
+    $('briefBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(r.brief)}catch{}});
+    $('renderBtn').addEventListener('click',()=>{
+      const rend2=$('rendered');
+      rend2.hidden=false;
+      rend2.innerHTML=microTool(text,it)+
+        '<div style="margin-top:10px"><button id="foldBtn">fold it back</button><button class="ghost" id="keepBtn">keep it (needs an argument)</button></div><div class="out" id="persistOut" hidden></div>';
+      $('foldBtn').addEventListener('click',()=>{
+        const f=R.foldBack(LEDGER,text,{mode:'generate',folds:[]});
+        if(f.ok){LEDGER=f.ledger;saveLedger();drawLedger();}
+        rend2.innerHTML='<div style="font:13.5px system-ui;color:var(--muted)">✨ folded back — the tool is gone, the learning remains. Ask again and the shadow remembers.</div>';
+      });
+      $('keepBtn').addEventListener('click',()=>{
+        const why=prompt('Persistence is a choice — argue it (a reason a reviewer could dispute):')||'';
+        const p=R.persist('generate',why);
+        const out=$('persistOut');out.hidden=false;
+        out.textContent=p.ok?('policy: '+p.policy+' — '+p.why):('REFUSED: '+p.why);
+      });
+    });
+  }
+  $('collapseBtn').addEventListener('click',()=>show($('intent').value));
+  $('intent').addEventListener('keydown',(e)=>{if(e.key==='Enter')show($('intent').value)});
+})();
+</script>
+</body>
+</html>
