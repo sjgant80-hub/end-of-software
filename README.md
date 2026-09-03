@@ -40,6 +40,17 @@ persistence), **hold-live** (compositions that exist while used), **render-and-f
 (capability as a verb — it happens, then un-happens, leaving learning). One mechanism, a
 persistence policy per capability.
 
+## Your org has a shadow too
+
+```
+node build-shadow.mjs --org yourcompany     # one command, via the GitHub API
+```
+
+Then **load it on the live page** — the seam answers from what YOUR org already owns:
+*"you already own this — stop rebuilding it."* The file never leaves your browser; the
+discovery is private. (Works for user accounts too. An undescribed repo is invisible to
+every seam — the generator says so rather than pretending.)
+
 ## The honest wire
 
 The page's generated micro-tools are deterministic renders of the brief — real enough to use

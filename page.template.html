@@ -68,7 +68,9 @@ verified case law"</em> (reuse) · <em>"double booking guard that learns strateg
 (recombine) · <em>"a checklist for opening the cabin each season"</em> (generate + fold back) ·
 <em>"invoice my client"</em> (a door).</p>
 <input type="text" id="intent" placeholder="what do you need done?" aria-label="your intent">
-<div><button id="collapseBtn">collapse</button></div>
+<div><button id="collapseBtn">collapse</button><button id="byoBtn" class="ghost">load YOUR org's shadow</button></div>
+<input type="file" id="byoFile" accept="application/json,.json" hidden>
+<div class="out" id="shadowLine"></div>
 <div id="verdictBox"></div>
 <div id="rendered" hidden></div>
 </div>
@@ -127,8 +129,25 @@ the Konomi architecture, created by Thomas Frumkin. Code MIT · mechanism CC0.</
 /*__SHADOW_START__*/
 /*__SHADOW_END__*/
 (function(){
-  const R=window.RENDER, FOLDS=window.SHADOW.folds;
+  const R=window.RENDER;
+  let FOLDS=window.SHADOW.folds, SOURCE='the estate ('+FOLDS.length+' live folds)';
   const $=(id)=>document.getElementById(id);
+  // BRING YOUR OWN SHADOW — generate yours in one command (build-shadow.mjs --org yourco)
+  // and load it here: the seam then answers from what YOUR org already owns. The file stays
+  // in this browser; nothing uploads — "you already own this" is a private discovery.
+  const drawShadowLine=()=>{$('shadowLine').textContent='shadow: '+SOURCE};
+  document.getElementById('byoBtn').addEventListener('click',()=>$('byoFile').click());
+  $('byoFile').addEventListener('change',async()=>{
+    const f=$('byoFile').files[0];if(!f)return;
+    try{
+      const j=JSON.parse(await f.text());
+      const folds=Array.isArray(j.folds)?j.folds.filter(x=>x&&typeof x.name==='string'&&typeof x.desc==='string'):[];
+      if(folds.length<5){$('shadowLine').textContent='REFUSED: that shadow holds '+folds.length+' described fold(s) — an undescribed repo is invisible to every seam';return}
+      FOLDS=folds;SOURCE=(j.source||'your file')+' ('+folds.length+' folds)';drawShadowLine();
+    }catch(e){$('shadowLine').textContent='not a shadow.json — generate one: node build-shadow.mjs --org yourco'}
+    $('byoFile').value='';
+  });
+  drawShadowLine();
   const esc=(s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   let LEDGER=[];try{LEDGER=JSON.parse(localStorage.getItem('eos.ledger.v1')||'[]')}catch{}
   const saveLedger=()=>{try{localStorage.setItem('eos.ledger.v1',JSON.stringify(LEDGER))}catch{}};
